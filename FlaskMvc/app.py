@@ -72,4 +72,7 @@ def conversor():
 
     return response
 
-app.run(host= "0.0.0.0", port= 3000, debug= False) #(host= "0.0.0.0", port= 3000, debug= True)
+#app.run(host= "0.0.0.0", port= 3000, debug= False) #(host= "0.0.0.0", port= 3000, debug= True)
+
+if __name__ == '__main__':
+    app.run(debug=False)
