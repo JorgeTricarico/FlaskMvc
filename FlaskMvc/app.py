@@ -74,6 +74,9 @@ def conversor():
 
 #app.run(host= "0.0.0.0", port= 3000, debug= False) #(host= "0.0.0.0", port= 3000, debug= True)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12c235a60443127618237f4535359fbd3851262f
 if __name__ == '__main__':
     app.run(debug=False)
