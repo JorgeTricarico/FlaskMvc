@@ -1,0 +1,238 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: xxx-large;
+    font-family: 'Darumadrop One', cursive;
+    display: block;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    background-image: url('/static/images/bgcalisma-1.jpg');
+    background-size: cover;
+    backdrop-filter: brightness(0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+form{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px 20px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+fieldset {
+    margin-bottom: 0px;
+    border: none;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: large;
+}
+
+form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-size: large;
+}
+
+.archivo{
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    background: #00bcd4(252, 227, 84);
+}
+
+form label{
+    display: block;
+    margin: 10px auto;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container::after {
+    content: '%';
+    position: absolute;
+    top: 50%;
+    right: 80px; /* Ajusta el valor según sea necesario */
+    transform: translateY(-50%);
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;    
+    background: #00bcd4;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition: 1s all;
+    cursor:pointer;
+    margin: 10px auto;
+    color: black;
+}
+
+.enviar:hover{
+    color:rgb(0, 0, 0);
+    border: 2px solid #000000;
+    background-color: rgba(0, 188, 212, 0.8);
+    transform: scale(1.2);
+}
+
+.enviar:active{
+    background-color: rgba(0, 188, 212, 0.5);
+    transition: 0s;
+    border: 2px solid #ffffff;
+}
+
+.oculto{
+    background-color: lightgray;
+}
+
+.oculto:hover{
+    transform: scale(1.0);
+    cursor: not-allowed;
+    background-color:gray;
+}
+
+.oculto:active{
+    background-color: rgba(212, 25, 0, 0.5);
+    transition: 0s;
+    border: 2px solid #ff0000;
+}
+
+main{
+    margin-bottom: 20px;
+    text-align: center
+}
+
+#divCargando{
+    display: none;
+    text-align: center;
+}
+
+#divCargando h2{
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+#divCargando img {
+    display: block;
+    margin: 0 auto;
+}
+
+#graveError{
+    display: none;
+    text-align: center;
+}
+
+#graveError img{
+    width: 150px;
+}
+
+.vacio::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+#fin{
+    display: none;
+    text-align: center;
+}
+
+#fin img{
+    width: 200px;
+}
+
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+footer h2{
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+#creado{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.in{
+    flex: 1;
+}
+
+.in h3{
+    display: block;
+}
+
+.in img{
+    height: 100px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+.in img:hover{
+    transform: scale(1.1);
+}
+
+.in img:active{
+    border: 2px solid #ffffff;
+    transform: scale(1.1);
+}
+
+footer h3, p{
+    display: inline;
+}
+
+@media (max-width: 350px) {
+    form{
+        padding: 0 0;
+    }
+}

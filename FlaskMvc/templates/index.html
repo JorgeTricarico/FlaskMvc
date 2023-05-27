@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:ital,wght@0,100;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Precio a tu PDF</title>
+</head>
+<body>
+    <h1 id="titulo1">PONELE PRECIO A TU CATÁLOGO!</h1>
+    
+    <main>
+      <h2 id="titulo2">↓ Cargue los datos ↓</h2>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Seleccione el nombre de su proveedor</legend>
+          <select>
+              <option>La bombachita</option>
+          </select>
+      </fieldset>
+
+        <label class="vacio" for="pdfFile">Cargue el catálogo de productos</label>
+        <input class='archivo' type="file" name="pdfFile" id="pdfFile" accept=".pdf" required>
+
+        <label class="vacio" for="excelFile">Cargue la lista de precios</label>
+        <input class='archivo' type="file" name="excelFile" id="excelFile" accept=".xlsx, .xls" required>
+
+        <label class="vacio" for="ganancia">¿Cuál es el porcentaje de ganancia?</label>
+        <div class="input-container">
+          <input type="number" name="ganancia" id="ganancia" min="0" required>
+        </div>
+
+        <label class="vacio" for="newPdfName">¿Qué nombre tendrá el nuevo Pdf?</label>
+        <input type="text" name="newPdfName" id="newPdfName" required>
+        
+        <input class='enviar oculto' type="submit" value="Convertir">
+      </form>
+    </main>
+  
+      <div id="divCargando">
+        <img src="{{url_for('static', filename='images/loading.gif')}}" alt="Cargando..." >
+        <h2>Cargando...</h2>
+        <p>Esto puede demorar unos minutos...</p>
+      </div>
+
+      <div id="graveError">
+        <img src="{{url_for('static', filename='images/piffle-error.gif')}}" alt="Error" >
+        <h2>No se pudo generar el nuevo PDF.</h2>
+        <h3>Lamentamos los inconvenientes.</h3>
+        <a href="index.html"><button>Intentar de nuevo</button></a>
+      </div>
+
+      <div id="fin">
+        <img src="{{url_for('static', filename='images/pdf.png')}}"  alt="Fin" >
+      </div>
+
+<footer>
+  <h2>Creado por:</h2>
+  <div id="creado">
+    <div class="in">
+      <h3>Jorge Ezequiel Tricarico</h3>
+      <img src="{{url_for('static', filename='images/Jorge.jpg')}}" alt="">
+    </div>
+    <div class="in"> 
+      <h3>Leandro Deferrari</h3>
+      <img src="{{url_for('static', filename='images/Leandro.jpg')}}" alt="">
+    </div>
+    <div class="in">
+      <h3>Martín Miselli</h3>  
+      <img src="{{url_for('static', filename='images/Martin.jpg')}}" alt="">
+    </div>
+  </div>
+  <h3>Contactanos en: </h3>
+  <p>+54 9 11 5047-9769</p>
+</footer>
+      
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
