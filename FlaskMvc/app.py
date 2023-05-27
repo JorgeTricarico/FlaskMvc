@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, send_file, app
+from flask import Flask, render_template, request, make_response, send_file
 from werkzeug.wrappers import Response
 import fitz as f
 import re
