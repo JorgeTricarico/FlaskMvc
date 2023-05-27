@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, make_response, send_file
+from flask import Flask, render_template, request, make_response, send_file, app
 from werkzeug.wrappers import Response
 import fitz as f
 import re
 import pandas as pd
 import math
 import io
+
 
 app = Flask(__name__)
 
