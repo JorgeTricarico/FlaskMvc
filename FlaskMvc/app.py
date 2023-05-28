@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, make_response, send_file
 from werkzeug.wrappers import Response
-import fitz as f
+import fitz #as f
 import re
 import pandas as pd
 import math
@@ -41,7 +41,7 @@ def conversor():
     
     pdf_data = pdf_file.read()
     pdf_buffer = io.BytesIO(pdf_data)
-    documento = f.open("pdf", pdf_buffer)
+    documento = fitz.open("pdf", pdf_buffer) #ACA
 
     regex = r"\d{2,}/\d{2,}|/\d{2,}\b|\d{2,}/\b"
     for numeroDePagina in range(len(documento)):
